@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --f-accent: 'Roboto', sans-serif;
+  --f-primary: 'Montserrat', sans-serif;
+  --size-blob: 400px;
+}
+
+ul {
+  display: block;
+  padding-left: 25px;
+
+  li {
+    position: relative;
+    display: block;
+    list-style: none;
+
+    &:before {
+      content: "\002d";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -20px;
+      pointer-events: none;
+    }
+  }
+
+  li + li {
+    margin-top: 6px;
+  }
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  font-family: var(--f-primary), sans-serif;
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--f-primary);
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: var(--f-accent);
+  margin: 0;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1.02rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+a {
+  font-weight: 500;
+}
+
+p + p {
+  margin-top: 20px;
+}

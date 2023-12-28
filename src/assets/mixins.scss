@@ -1,0 +1,43 @@
+/* stylelint-disable scss/no-dollar-variables */
+@use 'sass:map';
+
+@mixin media-breakpoint-up($name) {
+  $bp: map.get($grid-breakpoints, $name);
+  @if $bp {
+    @media (min-width: $bp) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $name) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  $bp: map.get($grid-breakpoints, $name);
+  @if $bp {
+    @media (max-width: ($bp - 1px)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: ($name - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-weight: $weight;
+    font-family: $font-family;
+    font-style: $style;
+    src:
+      url('#{$file-path}.woff2') format('woff2'),
+      url('#{$file-path}.woff') format('woff'),
+      url('#{$file-path}.ttf') format('truetype');
+    font-display: swap;
+  }
+}
+
+/* stylelint-enable scss/no-dollar-variables */

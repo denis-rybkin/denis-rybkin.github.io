@@ -1,0 +1,3 @@
+- Created and maintained modules(viper) in existing app with 230k loc, 0.5MM cleints
+- Integrated RESTful API, debugging Obj-C legacy codebase, developed unit tests
+- Communicated with 50+ members iOS team, perform code-review

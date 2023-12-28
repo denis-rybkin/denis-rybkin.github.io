@@ -1,0 +1,22 @@
+@import './colors.scss';
+@import './base.scss';
+@import './mixins.scss';
+@import './grid.scss';
+@import './background.scss';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  min-height: 100vh;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+}

@@ -1,0 +1,2 @@
+- Developed a multiple iOS applications from scratch 
+- Developed UI components, maintained exiting code base.

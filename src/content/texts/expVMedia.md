@@ -1,0 +1,3 @@
+- Developed iOS, tvOS multiplatform client-server application for iptv video streaming
+- Developed UI components, integrated API-schemas in close communication with backed-developers
+- Maintained and refactored existing codebase, perform code-review

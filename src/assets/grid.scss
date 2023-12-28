@@ -1,0 +1,98 @@
+@use 'sass:math';
+
+/* stylelint-enable scss/no-dollar-variables */
+
+$screen-xs: 320px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1440px;
+
+$grid-breakpoints: (
+  xs: $screen-xs,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl,
+  xxl: $screen-xxl
+);
+
+// if screen width is less than or equal to this breakpoint, mobile menu will be used.
+$breakpoint-menu-max: 1280px;
+
+:root {
+  @each $slug, $bp in $grid-breakpoints {
+    @if $slug != xs {
+      @media (min-width: $bp) {
+        --container-max-width: #{$bp};
+      }
+    }
+  }
+}
+
+/* stylelint-disable scss/no-dollar-variables */
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* stylelint-disable scss/no-dollar-variables */
+@each $slug, $size in $grid-breakpoints {
+  @include media-breakpoint-up($slug) {
+    @for $i from 1 to 15 {
+      $column-factor: #{math.div($i, 14)};
+
+      .#{$slug}-grid-column-span-#{$i} {
+        grid-column-end: span $i;
+      }
+
+      .#{$slug}-grid-column-start-#{$i} {
+        grid-column-start: $i;
+      }
+
+      .#{$slug}-grid-column-end-#{$i} {
+        grid-column-end: $i;
+      }
+
+      .#{$slug}-flex-column-#{$i} {
+        --column-basis: calc(100% * #{$column-factor});
+        flex-basis: var(--column-basis);
+        flex-shrink: 0;
+        max-width: var(--column-basis);
+      }
+
+      /**
+       * use this class inside .container--sticky-right.flex-wrapper
+       * if you need to set the size for column equals to column in .container
+       */
+      .#{$slug}-flex-column-safe-#{$i} {
+        --column-basis: calc(var(--full-width) * #{$column-factor});
+        flex-basis: var(--column-basis);
+        flex-shrink: 0;
+        max-width: var(--column-basis);
+      }
+
+      .#{$slug}-flex-column-auto {
+        flex-basis: calc(100% / 14);
+        flex-grow: 1;
+        min-width: calc(100% / 14);
+      }
+
+      .#{$slug}-order-#{$i} {
+        order: $i;
+      }
+    }
+  }
+}
+
+.grid-full-width {
+  grid-column: 1 / -1;
+}
