@@ -3,6 +3,7 @@ import type { PersonalPageCfg } from './types'
 
 import mainText from './texts/mainText.md?raw'
 import shortDesc from './texts/shortDesc.md?raw'
+import expFreelance from './texts/expFreelance.md?raw'
 import expSber from './texts/expSber.md?raw'
 import expMorizo from './texts/expMorizo.md?raw'
 import expVMedia from './texts/expVMedia.md?raw'
