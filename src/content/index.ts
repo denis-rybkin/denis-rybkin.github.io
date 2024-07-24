@@ -24,10 +24,6 @@ export const pageConfig: PersonalPageCfg = {
       icon: ['fab', 'github']
     },
     {
-      href: 'https://www.instagram.com/denisrybkin3',
-      icon: ['fab', 'instagram']
-    },
-    {
       href: 'https://www.linkedin.com/in/denis-rybkin',
       icon: ['fab', 'linkedin']
     },
@@ -37,21 +33,21 @@ export const pageConfig: PersonalPageCfg = {
     {
       from: 'Aug. 2021',
       to: 'Aug. 2022',
-      occupation: 'Middle iOS Developer',
+      occupation: 'iOS Developer',
       company: 'Sber',
       description: marked.parse(expSber).toString()
     },
     {
       from: 'Oct. 2020',
       to: 'Aug. 2021',
-      occupation: 'Middle iOS Developer',
+      occupation: 'iOS Developer',
       company: 'Morizo Digital',
       description: marked.parse(expMorizo).toString()
     },
     {
       from: 'Aug. 2018',
       to: 'Oct. 2020',
-      occupation: 'Junior iOS/tvOS Developer',
+      occupation: 'iOS/tvOS Developer',
       company: 'VMedia inc.',
       description: marked.parse(expVMedia).toString()
     },
