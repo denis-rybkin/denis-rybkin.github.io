@@ -1,0 +1,3 @@
+- Created iOS SwiftUI applications
+- Integrated RESTful API
+- Developed architectural solutions
