@@ -31,10 +31,17 @@ export const pageConfig: PersonalPageCfg = {
   mainText: marked.parse(mainText).toString(),
   resume: [
     {
+      from: 'Aug. 2022',
+      to: 'present',
+      occupation: 'iOS Developer',
+      company: 'Freelance',
+      description: marked.parse(expFreelance).toString()
+    },
+    {
       from: 'Aug. 2021',
       to: 'Aug. 2022',
       occupation: 'iOS Developer',
-      company: 'Sber',
+      company: 'SberBusiness',
       description: marked.parse(expSber).toString()
     },
     {
